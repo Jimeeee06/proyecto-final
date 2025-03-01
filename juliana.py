@@ -4,13 +4,13 @@ import pyttsx3, pywhatkit, wikipedia, os
 
 name = "juliana"
 listener = sr.Recognizer()
-engine = pyttsx3.init() #inicia pyttsx3
+engine = pyttsx3.init()
 voices = engine.getProperty("voices")
-engine.setProperty("voices", voices[0].id) #voz en español
-engine.setProperty("volumen", 1) #volumen
-wikipedia.set_lang("es") #idioma de wikipedia
+engine.setProperty("voices", voices[0].id)
+engine.setProperty("volumen", 1)
+wikipedia.set_lang("es")
 
-sites = {'google':'google.com', 'youtube':'youtube.com', 'whatsapp':'web.whatsapp.com', 'sia':'sia.unal.edu.co', 'correo':'mail.google.com'} #estos son los sitios que puede abrir juliana
+sites = {'google':'google.com', 'youtube':'youtube.com', 'whatsapp':'web.whatsapp.com', 'sia':'sia.unal.edu.co', 'correo':'mail.google.com'}
 
 
 def talk(texto):
@@ -33,7 +33,7 @@ def listen():
 
 def juliana():
     while True:
-        g = listen()  # Actualizamos la variable g en cada iteración
+        g = listen()
         if "reproduce" in g:
             cancion = g.replace("reproduce", "")
             t = "Reproduciendo " + cancion
