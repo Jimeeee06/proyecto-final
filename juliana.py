@@ -10,6 +10,7 @@ rate = engine.setProperty('rate', 200)
 engine.setProperty("voices", voices[0].id)
 engine.setProperty("volumen", 1)
 wikipedia.set_lang("es")
+comandos = {"reproduce":reproduce, "qué es":busqueda, "abre":abrir, "hora":hora, "día":día, "temporizador":temporizador, "vete":cerrar}
 
 def talk(texto):
     engine.say(texto)
@@ -127,7 +128,6 @@ def cerrar(g):
     talk("Adiós")
     return True
 
-comandos = {"reproduce":reproduce, "qué es":busqueda, "abre":abrir, "hora":hora, "día":día, "temporizador":temporizador, "vete":cerrar}
 
 def juliana():
     talk("Hola, soy Juliana, ¿en qué puedo ayudarte?")
